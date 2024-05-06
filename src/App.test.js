@@ -1,11 +1,17 @@
+// App.test.js
+
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders app component', () => {
+test('renders learn react link', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/Welcome to My App/i);
+  const linkElement = getByText(/Learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
 
-// Add more test cases as needed
+test('renders logo', () => {
+  const { getByAltText } = render(<App />);
+  const logoElement = getByAltText('logo');
+  expect(logoElement).toBeInTheDocument();
+});

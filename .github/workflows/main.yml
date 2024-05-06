@@ -4,7 +4,7 @@ name: Build on Package Version Change
 on:
   push:
     branches:
-      - master
+      - '*'
 
 jobs:
   build:
@@ -20,13 +20,13 @@ jobs:
       - name: Build React App
         run: npm run build
 
-      - name: Check for Package Version Change
-        id: check_version
-        run: |
-          PACKAGE_VERSION=$(node -p "require('./node_modules/my-utils/package.json').version")
+      # - name: Check for Package Version Change
+      #   id: check_version
+      #   run: |
+      #     PACKAGE_VERSION=$(node -p "require('./node_modules/my-utils/package.json').version")
           
-          echo "::set-output name=package_version::$PACKAGE_VERSION"
+      #     echo "::set-output name=package_version::$PACKAGE_VERSION"
 
-      - name: Trigger Build on Package Version Change
-        if: steps.check_version.outputs.package_version != ${{ github.event.before }}
-        run: echo "Version changed. Triggering build..."
+      # - name: Trigger Build on Package Version Change
+      #   if: steps.check_version.outputs.package_version != ${{ github.event.before }}
+      #   run: echo "Version changed. Triggering build..."
