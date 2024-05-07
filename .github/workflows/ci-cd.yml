@@ -17,7 +17,7 @@ jobs:
       run: npm install
 
     - name: Update Package
-      run: npm update my-utils
+      run: npm update @lakshmi_lakku/my-utils
 
     - name: Build React app
       run: npm run build
