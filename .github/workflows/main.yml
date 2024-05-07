@@ -1,31 +1,31 @@
-name: Build on Package Version Change
+# name: Build on Package Version Change
 
-on:
-  push:
-    branches:
-      - '*'
+# on:
+#   push:
+#     branches:
+#       - '*'
 
-jobs:
-  build:
-    runs-on: windows-latest
+# jobs:
+#   build:
+#     runs-on: windows-latest
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v2
 
-      - name: Install Dependencies
-        run: npm install
+#       - name: Install Dependencies
+#         run: npm install
         
-      - name: Build React App
-        run: npm run build
+#       - name: Build React App
+#         run: npm run build
      
-      - name: Check for Package Version Change
-        id: check_version
-        run: |
-          npm install @lakshmi_lakku/my-utils@latest
-          PACKAGE_VERSION=$(node -p "require('@lakshmi_lakku/my-utils/package.json').version")
-          echo "::set-output name=package_version::$PACKAGE_VERSION"
+#       - name: Check for Package Version Change
+#         id: check_version
+#         run: |
+#           npm install @lakshmi_lakku/my-utils@latest
+#           PACKAGE_VERSION=$(node -p "require('@lakshmi_lakku/my-utils/package.json').version")
+#           echo "::set-output name=package_version::$PACKAGE_VERSION"
 
-      - name: Trigger Build on Package Version Change
-        if: steps.check_version.outputs.package_version != '${{ github.event.before }}'
-        run: echo "Version changed. Triggering build..."
+#       - name: Trigger Build on Package Version Change
+#         if: steps.check_version.outputs.package_version != '${{ github.event.before }}'
+#         run: echo "Version changed. Triggering build..."
