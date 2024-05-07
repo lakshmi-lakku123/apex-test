@@ -23,7 +23,7 @@ jobs:
       - name: Check for Package Version Change
         id: check_version
         run: |
-          PACKAGE_VERSION=$(node -p "require('./node_modules/my-utils/package.json').version")
+          PACKAGE_VERSION=$(node -p "require('./node_modules/@lakshmi_lakku/my-utils/package.json').version")
           
           echo "::set-output name=package_version::$PACKAGE_VERSION"
 
