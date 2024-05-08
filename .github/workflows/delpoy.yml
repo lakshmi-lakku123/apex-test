@@ -19,7 +19,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_KEY }}
-          port: ${{ secrets.PORT }}
+          port: ${{ secrets.EC2_PORT }}
           script: |
             cd /Downloads/test1
             git pull origin master  # Or use your branch name if different
