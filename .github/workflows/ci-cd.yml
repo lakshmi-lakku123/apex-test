@@ -1,25 +1,25 @@
-name: CI/CD Pipeline
+# name: CI/CD Pipeline
 
-on:
-  push:
-    branches:
-       - '*'  
+# on:
+#   push:
+#     branches:
+#        - '*'  
 
-jobs:
-  build:
-    runs-on: windows-latest
+# jobs:
+#   build:
+#     runs-on: windows-latest
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install
+#     - name: Install dependencies
+#       run: npm install
 
-    - name: Update Package
-      run: npm update @lakshmi_lakku/my-utils
+#     - name: Update Package
+#       run: npm update @lakshmi_lakku/my-utils
 
-    - name: Build React app
-      run: npm run build
+#     - name: Build React app
+#       run: npm run build
 
 
