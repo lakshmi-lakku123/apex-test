@@ -17,8 +17,8 @@ jobs:
         uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ secrets.EC2_HOST }}
-          # username: ${{ secrets.EC2_USERNAME }}
-          # password: ${{ secrets.EC2_PASSWORD }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_KEY }}
           port: ${{ secrets.PORT }}
           script: |
             cd /Downloads/test1
