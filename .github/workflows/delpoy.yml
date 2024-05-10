@@ -18,7 +18,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-
       - name: Install SSH client
         run: sudo apt-get install openssh-client -y
 
@@ -27,7 +26,7 @@ jobs:
         with:
           host: 3.26.196.189
           username: ubuntu
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ env.secret_key }}
           port: 3000
           script: |
             cd /Downloads/test1
