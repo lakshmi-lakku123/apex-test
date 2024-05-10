@@ -14,7 +14,6 @@ jobs:
         run: |
           echo "Host.............: ${{ secrets.EC2_HOST }}"
           echo "Username...........: ${{ secrets.EC2_USERNAME }}"
-          echo ${{ process.env.secret_key }}
 
       - name: Checkout code
         uses: actions/checkout@v2
