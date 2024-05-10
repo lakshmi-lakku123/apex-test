@@ -27,33 +27,7 @@ jobs:
         with:
           host: 3.26.196.189
           username: ubuntu
-          key: -----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAg2a5Bkl7lugT8juO0+gP/T6+VhCcDK6lwpISfPSCFwqnJENc
-60YifHe8raLzUvYE9mDoCkOckEq5YKsilZuMl/qMbHIDoHOEei5lH8NQjNJ+zu+I
-ZqwoXsTo++VmsytIiDvbtJM8XIjfS/QbHd9M7Qb2DnDBGlzwAaSxEJSYwPzEoWBs
-BACNZ0e31MknMtoCnx+Ygq+GW/Kgo/Q38+7x8Mz9ypVlWyGUsvgUV8aajjGjzAg4
-0kun/I5ejkJRaUL184Ua2KVhek+0+lsd1U06x22jBCdM0S6SlXIn6QI+KzK7BTpl
-U3owknkJjeMhXLXi4MCDz4VyzQgm0Y0QcogG+wIDAQABAoIBAFbXn/bwv7aHYQ9Z
-n1aba13Shta4mXmkPzbtdTySGBwEVVyZDKMNsiMSu2cCZ8/vem4es5x8/M88I3Ip
-CG1Z5TxYQVA2tgDn96kMWpb4bZb0UwyOsFYy92dSuiwoe4x0UbZ/4P9hw6Xga7t1
-9Cn095E7ZYk7qdOzkodzgfZUTvRT4Xoer8SHlfc4UriPnmW/zjYbKvODY9G+Fl6M
-xJ6PSGRiVmGiemxFXjo0ObKbWhtwe3QV1uhE84I6FC0HsyzmYx0WfxjTMzImS6Li
-EZZym3BETQagOMlhNCfw6UPJfXvhdKirCb01gNQhWgPSotWnCTx3q9kNLqcgz6df
-Jdx8oukCgYEA5M3coxgsJUwv8ua2K2qicvM2qKEplEsPYhqV7NaDkCK8Uac2fbf7
-1iDs9Ua+eomt5xXoeDRebSXtm6+D14sJ3Tl1rJ1kTkdNH6svNqB3asyNNORryakh
-NbuY5ObJpw5+0QYi2rSc34hQnwlc7A39eYczaGE/BBZKrQwDzkXmXzcCgYEAkwUM
-p3d5ZPZts62SPHC/Md95+sISVbu992BxhmspD52whzu/DlKhYeupQaZP5EIWGsRo
-a+/gSYffmtT7Dp5+Oa5FbXGHO2r8NoitGOSCxWOhIJpL3HdINEHNMoClubW1Fkho
-PBMuWUx76xTCaImnhSNJqrhGI4HZvaV2E+E8EF0CgYAF4fkbRGLWLqhI8X+bjClT
-FUfBfCtKgceKeS6DoVxOl2YKH2d6QgG6lqwg/kmlcubCu0B33rjSy5fZWeDk6NE/
-G9wXrRBIJvMnrkoPeH65gzraMklHLQ8Kh6E9uWVT4z6Fd0fsIZqq8KFKBX6bHxz2
-Q/ChbWamX0BaRKXQZuGubwKBgQCB3FPxGHcB1ynPK+GfwXcgdmUoOYQ4djy15Vph
-gQYj5QWobf20iQhDlgVLF7w5wqYDvrj9nkRersWz3axknVqhWG263iy1LyrYgKFk
-+3MHJ5mLUr7vXe1JO1Yk5b187COoKwznA4pNFmHeo9eUvwJZd3H6egp6EphiC2Tg
-6nJDgQKBgGLtfXwiwKeXuvYPElwJcLPmg3eWO5rLUQDZX3uW7gGZUpGMXktz+7jb
-jlH2XufLLstQDxCSoD07QQ+QMoL91XK823BJeZHsUAGwZD97uWpkGgYZJ7lBprD1
-VgETWlwnCHBaevobtsZ3IIkdEXBSuf8839xmI+AK2xpwjm0oOSxD
------END RSA PRIVATE KEY-----
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 3000
           script: |
             cd /Downloads/test1
