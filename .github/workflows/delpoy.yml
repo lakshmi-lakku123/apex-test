@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "Host.............: ${{ secrets.EC2_HOST }}"
           echo "Username...........: ${{ secrets.EC2_USERNAME }}"
-          echo ${{ env.secret_key }}
+          echo ${{ process.env.secret_key }}
 
       - name: Checkout code
         uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
         with:
           host: 3.26.196.189
           username: ubuntu
-          key: ${{ env.secret_key }}
+          key: ${{ process.env.secret_key }}
           port: 3000
           script: |
             cd /Downloads/test1
