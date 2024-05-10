@@ -21,6 +21,9 @@ jobs:
       - name: Install SSH client
         run: sudo apt-get install openssh-client -y
 
+        - name: Load .env file
+        run: dotenv -e  && dotenv -e .env run echo "Key=$secret_key" >> $GITHUB_ENV
+
       - name: Deploy to EC2
         uses: appleboy/ssh-action@master
         with:
